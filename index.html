@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amaan Haider · Data Science & AI Portfolio</title>
+<meta name="description" content="Syed Mohammad Amaan Haider, MSc Data Science & AI student in Dubai. Machine learning projects, skills and certificates. Open to internships in the UAE.">
+<meta property="og:title" content="Amaan Haider · Data Science & AI">
+<meta property="og:description" content="MSc Data Science & AI student in Dubai, open to internships in the UAE.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧠%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e0e2c;--blue:#3d3bff;--pink:#ff8fd0;--lemon:#f4ff5c;--cloud:#f3f1ff;
+--disp:"Bricolage Grotesque","Arial Black",sans-serif;--body:"DM Sans",system-ui,sans-serif;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html,body{height:auto;margin:0}
+body{background:var(--ink);color:var(--cloud);font:400 1.05rem/1.55 var(--body);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lemon);outline-offset:3px}
+h1,h2,h3{font-family:var(--disp);margin:0;line-height:.95;letter-spacing:-.03em}
+section{position:relative;padding:clamp(4rem,10vw,8rem) clamp(1.1rem,5vw,4rem)}
+#bar{position:fixed;left:0;top:0;height:4px;width:100%;background:var(--pink);transform:scaleX(0);transform-origin:left;z-index:60}
+nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 14px) clamp(1.1rem,5vw,4rem) 14px;mix-blend-mode:difference;color:#fff;font-weight:500}
+nav .links{display:flex;gap:1.6rem}nav a{text-decoration:none}nav a:hover{text-decoration:underline;text-underline-offset:5px}
+@media(max-width:700px){nav .links a:not(:last-child){display:none}}
+#pre{position:fixed;inset:0;z-index:100;background:var(--lemon);color:var(--ink);display:grid;place-items:center;font:800 clamp(5rem,22vw,16rem)/1 var(--disp)}
+#ring{position:fixed;left:0;top:0;width:22px;height:22px;margin:-11px 0 0 -11px;border:2px solid #fff;border-radius:50%;mix-blend-mode:difference;pointer-events:none;z-index:90;display:none;place-items:center;font:700 .8rem var(--body);color:#fff;transition:width .25s,height .25s,margin .25s}
+#ring.big{width:84px;height:84px;margin:-42px 0 0 -42px}#ring::after{content:attr(data-t)}
+/* hero */
+#hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding-top:7rem}
+.blob{position:absolute;border-radius:50%;will-change:transform}
+.b1{width:34vw;height:34vw;background:var(--blue);right:-6vw;top:8vh}
+.b2{width:20vw;height:20vw;background:var(--pink);right:24vw;top:48vh}
+.b3{width:11vw;height:11vw;background:var(--lemon);right:8vw;bottom:14vh}
+.hero-in{position:relative;z-index:2}
+.kicker{font-weight:500;margin:0 0 1rem;max-width:34ch}
+h1{font-size:clamp(4.6rem,22vw,21rem);line-height:.8;font-stretch:100%}
+h1 .ln{display:block;overflow:hidden;padding:.06em 0}
+.ch{display:inline-block;font-variation-settings:"wght" 720,"wdth" 100;will-change:font-variation-settings}
+@media(hover:hover){.ch{font-variation-settings:"wght" 240,"wdth" 75}}
+.hero-bot{display:flex;flex-wrap:wrap;gap:1.2rem 2.5rem;justify-content:space-between;align-items:end;margin-top:2.2rem}
+.role{font:600 clamp(1.3rem,3vw,2rem)/1.1 var(--disp);min-height:2.2em}.role b{color:var(--lemon);font-weight:700;display:inline-block}
+.badge{display:inline-flex;gap:.6rem;align-items:center;background:var(--cloud);color:var(--ink);padding:.55rem 1rem;border-radius:99px;font-weight:700}
+.badge i{width:10px;height:10px;border-radius:50%;background:#14c85a;animation:p 1.6s infinite}
+@keyframes p{50%{box-shadow:0 0 0 8px #14c85a33}}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.9rem}
+.btn{display:inline-block;padding:.9rem 1.5rem;border-radius:99px;font-weight:700;text-decoration:none;background:var(--lemon);color:var(--ink);transition:transform .2s}
+.btn.o{background:none;color:var(--cloud);box-shadow:inset 0 0 0 2px var(--cloud)}.btn:hover{transform:scale(1.06) rotate(-1.5deg)}
+/* skills marquee */
+#skills{background:var(--pink);color:var(--ink);padding:3rem 0;overflow:hidden}
+.mq{display:flex;gap:2.5rem;width:max-content;font:800 clamp(3rem,9vw,7.5rem)/1.1 var(--disp);letter-spacing:-.03em;white-space:nowrap}
+.mq+.mq{margin-top:.4rem}
+.mq span:nth-child(even){-webkit-text-stroke:2px var(--ink);color:transparent}
+/* work */
+#work{background:var(--blue);padding-left:0;padding-right:0}
+.wh{padding:0 clamp(1.1rem,5vw,4rem);display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.wh h2{font-size:clamp(3rem,9vw,8rem)}.wh p{max-width:30ch;margin:0}
+.track{display:flex;gap:1.6rem;padding:0 clamp(1.1rem,5vw,4rem);width:max-content}
+@media(max-width:899px){.track{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem}.card{scroll-snap-align:center}}
+@media(min-width:900px){#work{height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding-top:4.5rem;padding-bottom:2rem}}
+.card{flex:none;width:min(82vw,500px);background:var(--cloud);color:var(--ink);border-radius:30px;overflow:hidden;cursor:pointer;transition:transform .25s ease-out;display:flex;flex-direction:column}
+.art{position:relative;height:clamp(200px,32vh,290px);background:radial-gradient(circle at 25% 20%,hsl(var(--h) 95% 62%),transparent 60%),radial-gradient(circle at 85% 90%,hsl(calc(var(--h) + 70) 95% 66%),transparent 55%),hsl(var(--h) 60% 22%);display:grid;place-items:center;overflow:hidden}
+.art b{font:800 8rem/1 var(--disp);color:#fff;mix-blend-mode:overlay;letter-spacing:-.05em}
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}.card:hover .art img{transform:scale(1.07)}
+.cb{padding:1.3rem 1.5rem 1.6rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.cb h3{font-size:1.9rem}.cb p{margin:0;color:#3b3b5c}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}.chips span{background:var(--ink);color:var(--cloud);border-radius:99px;padding:.2rem .75rem;font-size:.85rem}
+.meta{margin-top:auto;display:flex;gap:1rem;font-weight:700;font-size:.92rem}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:.45rem}
+.card.all{background:var(--lemon);justify-content:center;align-items:center;text-align:center;font:800 2.6rem/1 var(--disp);padding:2rem;text-decoration:none;width:min(70vw,340px)}
+dialog{border:0;padding:0;width:min(92vw,720px);border-radius:32px;overflow:hidden;background:var(--cloud);color:var(--ink);max-height:92svh;overflow-y:auto}
+dialog::backdrop{background:#0e0e2cb3;backdrop-filter:blur(6px)}dialog[open]{animation:pop .35s cubic-bezier(.2,1.2,.4,1)}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+dialog .art{height:300px}.x{position:absolute;right:14px;top:14px;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:1.6rem;cursor:pointer}
+dialog .cb{padding:1.6rem 2rem 2rem}dialog .btns .btn.o{color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+/* about */
+#about{background:var(--cloud);color:var(--ink)}
+.ab{display:grid;gap:3rem;grid-template-columns:1fr}@media(min-width:900px){.ab{grid-template-columns:1.1fr 1fr}}
+#about h2{font-size:clamp(2.8rem,7vw,6rem)}#about p{max-width:52ch;font-size:1.15rem}
+.tl{position:relative;padding-left:2rem}.tl-line{position:absolute;left:5px;top:6px;bottom:6px;width:3px;background:var(--blue);border-radius:3px}
+.tl article{position:relative;margin-bottom:2.2rem}.tl article::before{content:"";position:absolute;left:-2.1rem;top:.45rem;width:15px;height:15px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 3px var(--cloud),0 0 0 5px var(--blue)}
+.tl time{font-weight:700;color:var(--blue)}.tl h3{font-size:1.7rem;margin:.1rem 0 .3rem}.tl p{font-size:1rem;margin:0}
+/* certs */
+.cg{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:2.5rem}
+#certs h2{font-size:clamp(2.8rem,8vw,7rem)}
+.c{background:var(--cloud);color:var(--ink);border-radius:22px;padding:1.2rem 1.3rem;transition:transform .25s,background .25s}
+.c:hover{transform:translateY(-6px) rotate(-1.2deg);background:var(--pink)}.c small{font-weight:700;opacity:.7}.c h3{font-size:1.25rem;line-height:1.1;margin-top:.3rem}
+details{margin-top:1rem;background:var(--blue);border-radius:22px;padding:1.2rem 1.4rem}summary{cursor:pointer;font:700 1.4rem var(--disp)}
+details ul{columns:2 240px;margin:1rem 0 0;padding-left:1.1rem}
+/* contact */
+#contact{background:var(--lemon);color:var(--ink);text-align:center;min-height:90svh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.5rem}
+#contact h2{font-size:clamp(3.4rem,13vw,12rem);line-height:.85}
+#contact .btn{background:var(--ink);color:var(--lemon);font-size:1.2rem}#contact .btn.o{background:none;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+footer{padding:1.5rem;text-align:center;font-size:.9rem;background:var(--ink)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="pre" aria-hidden="true"><span id="cnt">0</span></div>
+<div id="bar"></div><div id="ring" aria-hidden="true"></div>
+<nav><a href="#hero" aria-label="Top">Amaan Haider</a><div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#certs">Certificates</a><a href="#contact">Contact</a></div></nav>
+
+<main>
+<section id="hero">
+ <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+ <div class="hero-in">
+  <p class="kicker">Syed Mohammad Amaan Haider, MSc Data Science & AI student at Middlesex University Dubai.</p>
+  <h1 aria-label="Amaan Haider"><span class="ln" aria-hidden="true">Amaan</span><span class="ln" aria-hidden="true">Haider</span></h1>
+  <div class="hero-bot">
+   <div class="role" aria-live="off">I build <b id="role">machine learning models</b></div>
+   <div><span class="badge"><i></i>Open to internships in the UAE</span>
+    <div class="btns"><a class="btn" href="#work">See my work</a><a class="btn o" href="mailto:amaan110210@gmail.com">Email me</a></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="skills" aria-label="Skills"><div class="mq" id="m1"></div><div class="mq" id="m2"></div></section>
+
+<section id="work">
+ <div class="wh"><h2>Projects</h2><p><b id="count">2</b> repos from my GitHub. Scroll sideways, tap one to open it.</p></div>
+ <div class="track" id="track"></div>
+</section>
+
+<section id="about">
+ <div class="ab">
+  <div data-bloom>
+   <h2>Data first, models second, everything on GitHub.</h2>
+   <p>I’m an MSc Data Science & AI student with a BCA background and hands-on time in Python, Java, C++ and SQL. I’m going deep into machine learning, from regression and classification to projects on real datasets.</p>
+   <p>I want an internship in the UAE where I can learn from a team and contribute from day one.</p>
+   <p><b>Tools:</b> Python, NumPy, Pandas, Scikit-learn, Matplotlib, SQL, Java, C++, C#, JavaScript, React, Node.js, MongoDB, Android Studio.</p>
+  </div>
+  <div class="tl" data-bloom><div class="tl-line"></div>
+   <article><time>Sep 2026 to Sep 2027</time><h3>MSc Data Science & AI</h3><p>Middlesex University Dubai. Machine learning, data analytics, data engineering and generative AI.</p></article>
+   <article><time>Aug to Sep 2024</time><h3>Programmer Intern</h3><p>Yhills Academy, remote. Coding with a focus on AI and ML, finished with a project completion certificate.</p></article>
+   <article><time>Sep 2022 to Jan 2025</time><h3>BCA</h3><p>Doon Business School. C, C++, Java, PHP, Android and SQL, plus leadership and digital media.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="certs" style="background:var(--ink)">
+ <h2 data-bloom>Certificates</h2>
+ <div class="cg" id="cg"></div>
+ <details data-bloom><summary>11 more from LinkedIn Learning</summary>
+  <ul><li>SQL Programming</li><li>Learning C#</li><li>Learning Java 11</li><li>Programming Concepts for Python</li><li>Full-Stack JavaScript: MongoDB, Node, React</li><li>JavaScript Essential Training</li><li>CSS Essential Training</li><li>HTML Essential Training</li><li>Succeeding in Web Development</li><li>Programming Foundations: Databases</li><li>Programming Foundations: Fundamentals</li></ul></details>
+</section>
+
+<section id="contact">
+ <h2 data-bloom>Let’s build something.</h2>
+ <p>Open to data science and AI internships in the UAE.</p>
+ <div class="btns" style="justify-content:center"><a class="btn" href="mailto:amaan110210@gmail.com">amaan110210@gmail.com</a><a class="btn o" href="https://github.com/syedamaanhaider" target="_blank" rel="noopener">GitHub</a><a class="btn o" href="https://www.linkedin.com/in/amaan110" target="_blank" rel="noopener">LinkedIn</a></div>
+</section>
+</main>
+<footer>© <span id="yr"></span> Syed Mohammad Amaan Haider</footer>
+<dialog id="dlg" aria-label="Project details"></dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+const CFG={user:'syedamaanhaider'};
+/* Pinned projects. Paste more repo names here; live GitHub data fills in the rest when the page is hosted on your own domain. */
+let P=[
+ {n:'SOS App',repo:'SOS-App',d:'A safety app built around a quick SOS alert. Open the repo for the full write-up.',l:'Code',t:['GitHub']},
+ {n:'ML Projects: Iris & Tesla',repo:'Machine-Learning-Projects',d:'Beginner machine learning in Python: Iris flower classification and Tesla stock price prediction.',l:'Python',t:['NumPy','Pandas','Scikit-learn','Matplotlib']}
+];
+const $=s=>document.querySelector(s),reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const hue=s=>{let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))%360;return h};
+$('#yr').textContent=new Date().getFullYear();
+
+/* skills marquee */
+const R1=['Python','SQL','Machine Learning','NumPy','Pandas','Scikit-learn','Matplotlib','Generative AI'],R2=['Java','C++','C#','JavaScript','React','Node.js','MongoDB','Android'];
+[['#m1',R1],['#m2',R2]].forEach(([s,a])=>$(s).innerHTML=[...a,...a].map(w=>`<span>${w}</span>`).join(''));
+
+/* certificates */
+const C=[['HackerRank','Python (Basic) Certificate','Dec 2025'],['IBM','Python for Data Science, AI & Development','Mar 2024'],['DeepLearning.AI','AI For Everyone',''],['Google','Foundations of Cybersecurity',''],['Google','Foundations: Data, Data, Everywhere',''],['University of Colorado','Fundamentals of Network Communication',''],['Infosys Springboard','Demystifying Generative AI for Leaders','Jul 2024'],['Yhills','Project Completion using AI and ML','Oct 2024'],['Yhills','Artificial Intelligence course','Oct 2024']];
+$('#cg').innerHTML=C.map(c=>`<div class="c" data-bloom><small>${c[0]}${c[2]?' · '+c[2]:''}</small><h3>${c[1]}</h3></div>`).join('');
+
+/* projects */
+const art=p=>`<div class="art" style="--h:${hue(p.repo)}"><b>${E(p.n.split(/[ :]/).filter(Boolean).slice(0,2).map(w=>w[0]).join(''))}</b><img alt="Preview of ${E(p.n)}" loading="lazy" src="https://opengraph.githubassets.com/1/${CFG.user}/${E(p.repo)}" onerror="this.remove()"></div>`;
+const tr=$('#track'),dlg=$('#dlg');
+function render(){
+ tr.innerHTML=P.map((p,i)=>`<article class="card" tabindex="0" role="button" data-i="${i}" aria-label="Open ${E(p.n)}">${art(p)}<div class="cb"><h3>${E(p.n)}</h3><p>${E(p.d)}</p><div class="chips">${(p.t||[]).slice(0,4).map(t=>`<span>${E(t)}</span>`).join('')}</div><div class="meta"><span><i class="dot" style="background:hsl(${hue(p.repo)} 90% 55%)"></i>${E(p.l||'Code')}</span>${p.s?`<span>★ ${p.s}</span>`:''}</div></div></article>`).join('')+`<a class="card all" href="https://github.com/${CFG.user}" target="_blank" rel="noopener">All repos on GitHub</a>`;
+ $('#count').textContent=P.length;
+}
+function openP(i){const p=P[i];dlg.innerHTML=`<button class="x" aria-label="Close" onclick="dlg.close()">×</button>${art(p)}<div class="cb"><h3>${E(p.n)}</h3><p>${E(p.d)}</p><div class="chips">${(p.t||[]).map(t=>`<span>${E(t)}</span>`).join('')}</div><div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://github.com/${CFG.user}/${E(p.repo)}">View code</a>${p.home?`<a class="btn o" target="_blank" rel="noopener" href="${E(p.home)}">Live demo</a>`:''}</div></div>`;dlg.showModal()}
+tr.addEventListener('click',e=>{const c=e.target.closest('.card[data-i]');if(c)openP(+c.dataset.i)});
+tr.addEventListener('keydown',e=>{const c=e.target.closest('.card[data-i]');if(c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openP(+c.dataset.i)}});
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+tr.addEventListener('pointermove',e=>{const c=e.target.closest('.card');if(!c||reduce)return;const r=c.getBoundingClientRect();c.style.transform=`perspective(900px) rotateY(${((e.clientX-r.left)/r.width-.5)*10}deg) rotateX(${-((e.clientY-r.top)/r.height-.5)*10}deg)`});
+tr.addEventListener('pointerout',e=>{const c=e.target.closest('.card');if(c)c.style.transform=''});
+render();
+
+let hst;
+function initH(){
+ if(hst){hst.scrollTrigger.kill(true);hst.kill();hst=null;gsap.set(tr,{clearProps:'transform'})}
+ if(reduce||innerWidth<900)return;
+ hst=gsap.to(tr,{x:()=>-(tr.scrollWidth-document.documentElement.clientWidth),ease:'none',scrollTrigger:{trigger:'#work',start:'top top',end:()=>'+='+(tr.scrollWidth-document.documentElement.clientWidth),pin:true,scrub:.6,invalidateOnRefresh:true}});
+}
+
+/* live GitHub data: works when hosted on your own site (GitHub Pages etc.) */
+fetch(`https://api.github.com/users/${CFG.user}/repos?per_page=100&sort=updated`).then(r=>r.ok?r.json():Promise.reject()).then(rs=>{
+ const live=rs.filter(r=>!r.fork).map(r=>({n:r.name.replace(/[-_]/g,' '),repo:r.name,d:r.description||'No description yet. Open the repo to read more.',l:r.language||'Code',t:[r.language,...(r.topics||[])].filter(Boolean),s:r.stargazers_count,home:r.homepage}));
+ const key=x=>x.repo.toLowerCase(),pin=P.map(p=>{const m=live.find(x=>key(x)===key(p));return m?{...m,n:p.n,d:m.d.startsWith('No description')?p.d:m.d}:p});
+ P=[...pin,...live.filter(x=>!P.some(p=>key(p)===key(x)))];render();window.gsap&&(initH(),ScrollTrigger.refresh());
+}).catch(()=>{});
+
+/* motion */
+function start(){
+ const hero=gsap.timeline();
+ $('h1').querySelectorAll('.ln').forEach(l=>{l.innerHTML=[...l.textContent].map(c=>`<span class="ch">${c}</span>`).join('')});
+ const chs=[...document.querySelectorAll('.ch')];
+ hero.from(chs,{yPercent:115,duration:.9,ease:'power4.out',stagger:.05})
+  .from('.blob',{scale:0,duration:1.2,ease:'elastic.out(1,.6)',stagger:.15},'-=.6')
+  .from('.kicker,.hero-bot',{opacity:0,y:30,duration:.7,stagger:.15},'-=.9');
+ /* variable-font letters swell near the pointer */
+ if(matchMedia('(hover:hover)').matches)addEventListener('pointermove',e=>{for(const el of chs){const r=el.getBoundingClientRect(),d=Math.hypot(e.clientX-r.left-r.width/2,e.clientY-r.top-r.height/2),k=Math.max(0,1-d/300);el.style.fontVariationSettings=`"wght" ${240+k*560|0},"wdth" ${75+k*25|0}`}},{passive:true});
+ /* blobs float + follow the pointer */
+ gsap.utils.toArray('.blob').forEach((b,i)=>gsap.to(b,{y:i%2?-30:30,duration:3+i,yoyo:true,repeat:-1,ease:'sine.inOut'}));
+ addEventListener('pointermove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;gsap.to('.blob',{x:(i)=>x*(i+1)*-50,duration:1.2,overwrite:'auto'})},{passive:true});
+ /* rotating roles */
+ const roles=['machine learning models','clean data pipelines','things that ship','SQL that answers questions'];let ri=0;
+ setInterval(()=>{ri=(ri+1)%roles.length;gsap.fromTo('#role',{yPercent:60,opacity:0},{yPercent:0,opacity:1,duration:.5,onStart:()=>$('#role').textContent=roles[ri]})},2400);
+ /* bloom reveals */
+ gsap.utils.toArray('[data-bloom]').forEach(el=>gsap.from(el,{opacity:0,scale:.88,y:80,rotate:gsap.utils.random(-3,3),duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
+ /* timeline line draws */
+ gsap.fromTo('.tl-line',{scaleY:0},{scaleY:1,transformOrigin:'top',ease:'none',scrollTrigger:{trigger:'.tl',start:'top 75%',end:'bottom 70%',scrub:true}});
+ gsap.to('#bar',{scaleX:1,ease:'none',scrollTrigger:{scrub:.2,start:0,end:'max'}});
+ /* marquee reacts to scroll speed and direction */
+ const rows=['#m1','#m2'].map((s,i)=>gsap.fromTo(s,{xPercent:i?-50:0},{xPercent:i?0:-50,duration:34,ease:'none',repeat:-1}));let tm;
+ ScrollTrigger.create({onUpdate:s=>{const v=1+Math.min(6,Math.abs(s.getVelocity())/350),d=s.direction;rows[0].timeScale(d*v);rows[1].timeScale(-d*v);clearTimeout(tm);tm=setTimeout(()=>{gsap.to(rows[0],{timeScale:d});gsap.to(rows[1],{timeScale:-d})},120)}});
+ initH();
+}
+(function(){
+ const pre=$('#pre');
+ if(!window.gsap||reduce){pre.remove();document.querySelectorAll('h1 .ln').forEach(l=>l.setAttribute('aria-hidden','false'));if(window.gsap){gsap.registerPlugin(ScrollTrigger);}return}
+ gsap.registerPlugin(ScrollTrigger);
+ if(window.Lenis){const L=new Lenis();L.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>L.raf(t*1000));gsap.ticker.lagSmoothing(0);
+  document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();L.scrollTo(t)}}))}
+ if(matchMedia('(hover:hover) and (pointer:fine)').matches){const ring=$('#ring');ring.style.display='grid';const xs=gsap.quickTo(ring,'x',{duration:.25}),ys=gsap.quickTo(ring,'y',{duration:.25});
+  addEventListener('pointermove',e=>{xs(e.clientX);ys(e.clientY)});
+  document.addEventListener('pointerover',e=>{ring.classList.toggle('big',!!e.target.closest('a,button,.card,summary'));ring.dataset.t=e.target.closest('.card[data-i]')?'Open':''})}
+ const o={v:0};
+ gsap.to(o,{v:100,duration:1.2,ease:'power2.inOut',onUpdate:()=>$('#cnt').textContent=Math.round(o.v),onComplete:()=>{gsap.to(pre,{yPercent:-100,duration:.8,ease:'power4.inOut',onComplete:()=>pre.remove()});start()}});
+})();
+</script>
+</body>
+</html>
